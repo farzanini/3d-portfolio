@@ -79,11 +79,21 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          These are my recent projects, which showcase my skills and experience
+          through real-world examples of my work. Leveraging cutting-edge
+          technologies like Next.js 13, tRPC, Prisma, and integrated AI, I have
+          crafted these projects to demonstrate my proficiency in web
+          development and problem-solving. Additionally, I have experience
+          working with advanced libraries like three.js to create immersive and
+          interactive experiences. I have also mastered the art of deploying
+          projects seamlessly, utilizing services such as Vercel and Supabase to
+          ensure top-notch performance and accessibility. Each project comes
+          with its own code repository, allowing you to delve into the technical
+          details, and live demos that you can readily access and experience
+          firsthand. These projects reflect my ability to tackle complex
+          problems, work with diverse technologies, and effectively manage
+          projects. I take pride in constantly learning and applying new
+          knowledge to deliver exceptional results.
         </motion.p>
       </div>
 

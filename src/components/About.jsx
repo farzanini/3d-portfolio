@@ -42,12 +42,14 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, next.js, and django
-        react framework. I'm a quick learner and collaborate closely with
-        clients to create efficient, scalable, and user-friendly solutions that
-        solve real-world problems. Let's work together to bring your ideas to
-        life!
+        Highly skilled and motivated web developer with a decade of experience
+        in computer science. Proficient in web development and specialized in
+        React with three years of professional expertise. Committed to
+        continuous learning and seeking opportunities to tackle complex
+        challenges while contributing to business growth. Eager to expand
+        knowledge, stay updated with emerging technologies, and deliver
+        innovative solutions. I am dedicated to personal and professional
+        growth, always striving to exceed expectations.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
