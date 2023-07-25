@@ -10,20 +10,15 @@ import {
   reactjs,
   redux,
   tailwind,
-  nodejs,
   python,
   django,
-  mongodb,
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  react,
   blogapp,
-  jobit,
-  tripguide,
+  three,
+  emoter,
   threejs,
 } from "../assets";
 
@@ -120,8 +115,8 @@ const experiences = [
   {
     title: "Freelance Full Stack Developer ",
     company_name: "Australia",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: react,
+    iconBg: "#FAFAFA",
     date: "From February 2021",
     points: [
       "Successfully transitioned from a Front-End developer to a full-stack React and Django developer",
@@ -135,8 +130,8 @@ const experiences = [
   {
     title: "Back-End Developer",
     company_name: "Tymer",
-    icon: tesla,
-    iconBg: "#E6DEDD",
+    icon: django,
+    iconBg: "#FAFAFA",
     date: "January 2020 - February 2021",
     points: [
       "Utilized Django Rest Framework (DRF) to build RESTful APIs, enabling seamless data communication between the Front-End and Back-End.",
@@ -194,49 +189,52 @@ const projects = [
       },
     ],
     image: blogapp,
+    demo_link: "https://blog-app-git-main-farzanhosseini.vercel.app/",
     source_code_link: "https://github.com/FarzanHosseini/blog-app",
   },
   {
-    name: "Job IT",
+    name: "ThreeJS T-Shirt Design",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The ThreeJS T-Shirt Design project is a cutting-edge web application that enables users to create custom t-shirt designs with an immersive 3D rendering experience. Leveraging the power of Three.js, users can visualize their designs in a realistic 3D model, making the design process both interactive and engaging.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Three.js",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: three,
+    demo_link: "https://threejs-front-demo-git-main-farzanhosseini.vercel.app/",
+    source_code_link: "https://github.com/FarzanHosseini/threejs-front-demo",
   },
   {
-    name: "Trip Guide",
+    name: "Emoter",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Emoter is a fun and expressive Twitter clone with a twist. Instead of traditional text-based tweets, users communicate solely through emojis, making it a unique and engaging social media experience. Emoter allows users to post their emotions, thoughts, and reactions using a wide array of emojis, fostering a lighthearted and visually appealing platform for social interactions.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "react",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "prisma",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: emoter,
+    demo_link: "https://emoter-git-main-farzanhosseini.vercel.app/",
+    source_code_link: "https://github.com/FarzanHosseini/emoter",
   },
 ];
 
