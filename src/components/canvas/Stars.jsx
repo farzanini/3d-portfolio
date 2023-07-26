@@ -9,7 +9,7 @@ const Stars = (props) => {
 
   const sphere = !isMobile
     ? random.inSphere(new Float32Array(5000), { radius: 1.2 })
-    : random.inSphere(new Float32Array(2), { radius: 1.2 });
+    : random.inSphere(new Float32Array(1), { radius: 1.2 });
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
