@@ -1,35 +1,12 @@
-import { useState, useRef, Suspense, useEffect } from "react";
+import { useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
 const Stars = (props) => {
   const ref = useRef();
-  const [isMobile, setIsMobile] = useState(false);
 
-  const sphere = !isMobile
-    ? random.inSphere(new Float32Array(5000), { radius: 1.2 })
-    : random.inSphere(new Float32Array(1), { radius: 1.2 });
-  useEffect(() => {
-    // Add a listener for changes to the screen size
-    const mediaQuery = window.matchMedia("(max-width: 500px)");
-
-    // Set the initial value of the `isMobile` state variable
-    setIsMobile(mediaQuery.matches);
-
-    // Define a callback function to handle changes to the media query
-    const handleMediaQueryChange = (event) => {
-      setIsMobile(event.matches);
-    };
-
-    // Add the callback function as a listener for changes to the media query
-    mediaQuery.addEventListener("change", handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
-    return () => {
-      mediaQuery.removeEventListener("change", handleMediaQueryChange);
-    };
-  }, []);
+  const sphere = random.inSphere(new Float32Array(3000), { radius: 1.2 });
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
