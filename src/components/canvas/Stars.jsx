@@ -7,6 +7,9 @@ const Stars = (props) => {
   const ref = useRef();
   const [isMobile, setIsMobile] = useState(false);
 
+  const sphere = !isMobile
+    ? random.inSphere(new Float32Array(5000), { radius: 1.2 })
+    : random.inSphere(new Float32Array(2), { radius: 1.2 });
   useEffect(() => {
     // Add a listener for changes to the screen size
     const mediaQuery = window.matchMedia("(max-width: 500px)");
@@ -27,10 +30,7 @@ const Stars = (props) => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
-  const sphere = random.inSphere(
-    new Float32Array(isMobile ? Float32Array(2) : Float32Array(3000)),
-    { radius: 1.2 }
-  );
+
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;
     ref.current.rotation.y -= delta / 15;
