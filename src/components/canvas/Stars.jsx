@@ -1,12 +1,29 @@
-import { useRef, Suspense } from "react";
+import { useEffect, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
+import * as THREE from "three";
+import WebGLManager from "../WebGLManager";
+
 const Stars = (props) => {
   const ref = useRef();
+  const sceneRef = useRef(null);
 
   const sphere = random.inSphere(new Float32Array(3000), { radius: 1.2 });
+
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    sceneRef.current = scene;
+
+    // Add your objects, lights, etc. to the scene
+
+    WebGLManager.addScene(sceneRef.current);
+
+    return () => {
+      WebGLManager.removeScene(sceneRef.current);
+    };
+  }, []);
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 10;

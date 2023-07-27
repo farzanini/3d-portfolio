@@ -1,11 +1,28 @@
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useState, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+import * as THREE from 'three';
+import WebGLManager from '../WebGLManager';
+
 const Computers = ({ isMobile }) => {
+  const sceneRef = useRef(null);
   const computer = useGLTF("./desktop_pc/scene.gltf");
+
+  useEffect(() => {
+    const scene = new THREE.Scene();
+    sceneRef.current = scene;
+
+    // Add your objects, lights, etc. to the scene
+
+    WebGLManager.addScene(sceneRef.current);
+
+    return () => {
+      WebGLManager.removeScene(sceneRef.current);
+    };
+  }, []);
 
   return (
     <mesh>
