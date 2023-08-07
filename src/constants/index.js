@@ -1,3 +1,4 @@
+import { m } from "framer-motion";
 import {
   mobile,
   backend,
@@ -23,6 +24,7 @@ import {
 } from "../assets";
 
 export const navLinks = [
+
   {
     id: "about",
     title: "About",

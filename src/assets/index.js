@@ -33,6 +33,8 @@ import blogapp from "./blogapp.png";
 import three from "./three.png";
 import emoter from "./emoter.png";
 
+import resume from './resume.pdf'
+
 export {
   logo,
   backend,
@@ -65,4 +67,5 @@ export {
   emoter,
   python,
   django,
+  resume,
 };
