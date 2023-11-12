@@ -24,7 +24,6 @@ import {
 } from "../assets";
 
 export const navLinks = [
-
   {
     id: "about",
     title: "About",
@@ -111,31 +110,52 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Freelance Full Stack Developer ",
-    company_name: "Australia",
+    title: "Senior Frontend Developer ",
+    company_name: "Extend",
     icon: react,
     iconBg: "#FAFAFA",
-    date: "From February 2021",
+    date: "From November 2022",
     points: [
-      "Successfully transitioned from a Front-End developer to a full-stack React and Django developer",
-      "Utilized Redux to implement a robust 'store,' effectively managing data across multiple components and pages",
-      "Demonstrated expertise in utilizing various React component libraries to enhance UI/UX and optimize development efficiency",
-      "Gained extensive knowledge and experience in JavaScript ES5/ES6/ES7, enabling the development of modern and sophisticated web applications",
-      "Deepened Django Rest Framework (DRF) knowledge, resulting in faster and more streamlined API responses",
-      "Designed and implemented a relational database model using Django ORM, ensuring efficient data management and retrieval",
+      " I’ve meticulously revised and refactored legacy code, infusing modern programming paradigms and efficient algorithms to ensure optimal performance, maintainability, and scalability. My precision and attention to detail have resulted in a harmonized, clean codebase, laying a robust foundation for future developments.",
+      " Leading the initiative to transcend the conventional, I spearheaded the migration from a standard UI component library to a sophisticated blend of custom-created UI elements and a novel library. This transition, orchestrated with finesse, ensures a unique, intuitive, and engaging user experience tailored to our audience.",
+      " My role is characterized by a synergistic collaboration with the design team. By fostering an environment of open communication and creative freedom, I’ve facilitated the seamless translation of their innovative designs into functional, user-friendly interfaces. This close-knit partnership ensures the realization of aesthetic and functional excellence, unmarred by technical limitations.",
+    ],
+  },
+  {
+    title: "Full Stack Developer ",
+    company_name: "Inspection",
+    icon: react,
+    iconBg: "#FAFAFA",
+    date: "February 2020 - November 2022",
+    points: [
+      " Spearheaded the selection of cutting-edge technologies and engineered both frontend and backend systems, ensuring seamless integration and optimized performance",
+      " Utilized diverse React component libraries and Redux for effective data management, elevating the user experience and development efficiency.",
+      " Gained extensive knowledge and experience in JavaScript ES5/ES6/ES7, enabling the development of modern and sophisticated web applications.",
+      "Gained extensive knowledge and experience in JavaScript ES5/ES6/ES7, enabling the development of modern and sophisticated web applicationsRefined and applied DRF expertise to optimize API responses, ensuring streamlined and rapid data processing and retrieval.",
     ],
   },
   {
     title: "Back-End Developer",
-    company_name: "Tymer",
+    company_name: "Tymr",
     icon: django,
     iconBg: "#FAFAFA",
-    date: "January 2020 - February 2021",
+    date: "January 2019 - February 2020",
     points: [
-      "Utilized Django Rest Framework (DRF) to build RESTful APIs, enabling seamless data communication between the Front-End and Back-End.",
-      "Designed and implemented Django models using ORM, ensuring efficient interactions between the Database and API.",
-      "Collaborated with Front-End developers using Git, facilitating version control and smooth teamwork.",
-      "Successfully deployed the project using Docker and Docker-compose, effectively deploying it on a Platform-as-a-Service (PAAS) infrastructure.",
+      "Utilized Django Rest Framework (DRF) to build RESTful APIs, enabling seamless data communication between the Front-End and Back-End.Utilized Django Rest Framework to create efficient APIs, ensuring seamless front-end and back-end communication.",
+      "Designed and executed Django models, enhancing API-database interactions.Designed and implemented Django models using ORM, ensuring efficient interactions between the Database and API.",
+      " Successfully launched the project on a PAAS infrastructure using Docker and Docker-compose.Collaborated with Front-End developers using Git, facilitating version control and smooth teamwork.",
+    ],
+  },
+  {
+    title: "Digital Solutions Specialist: Web Designer IT Support Engineer",
+    company_name: "Dinaweb",
+    icon: django,
+    iconBg: "#FAFAFA",
+    date: "July 2008 - September 2018",
+    points: [
+      "Designed aesthetic websites using CMSs and developed Android applications, offering tailored digital solutions.",
+      "Delivered comprehensive support, resolving a range of software, hardware, and network issues for diverse clients.",
+      "Effectively managed team tasks and deadlines, ensuring a collaborative and productive work environment.",
     ],
   },
 ];
