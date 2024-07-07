@@ -42,18 +42,17 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Seasoned web developer boasting a decade of rich experience in computer
-        science and a specialized mastery over React, honed over three rigorous
-        years of professional engagement. My passion for continuous learning and
-        innovation is mirrored in my commitment to surmounting complex
-        challenges and contributing significantly to organizational growth.
-        Colleagues often acknowledge my innate ability to lead and inspire, a
-        testament to the combination of expertise and enthusiasm I bring to
-        every project. I am devoted to fostering an environment of collaborative
-        learning where knowledge transfer is seamless and collective growth is
-        prioritized. As a professional who consistently aims to exceed
-        expectations, I am always looking to embrace emerging technologies and
-        innovate, seeking to catalyze personal and organizational excellence.
+        - <strong>Experienced Web Developer:</strong>
+        <br /> Specializes in transforming complex designs into functional user
+        experiences.
+        <br />- <strong>Project Leadership:</strong>
+        <br /> Proven ability to lead projects and deliver results that exceed
+        expectations.
+        <br />- <strong>Effective Communicator:</strong>
+        <br /> Excels in team settings, ensuring alignment with project goals.
+        <br /> - <strong>Collaborative Approach:</strong>
+        <br /> Integrates technical excellence with teamwork, leading to a track
+        record of successful projects and strong professional relationships.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
