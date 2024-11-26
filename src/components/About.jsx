@@ -42,17 +42,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        - <strong>Experienced Web Developer:</strong>
-        <br /> Specializes in transforming complex designs into functional user
-        experiences.
-        <br />- <strong>Project Leadership:</strong>
-        <br /> Proven ability to lead projects and deliver results that exceed
-        expectations.
-        <br />- <strong>Effective Communicator:</strong>
-        <br /> Excels in team settings, ensuring alignment with project goals.
-        <br /> - <strong>Collaborative Approach:</strong>
-        <br /> Integrates technical excellence with teamwork, leading to a track
-        record of successful projects and strong professional relationships.
+        Frontend Engineer with a sharp eye for efficiency and a passion for
+        clean, maintainable code. I thrive on simplifying complexity—whether
+        it's redesigning systems for clarity or leading teams toward streamlined
+        solutions. Known for my charismatic leadership and teaching abilities, I
+        inspire teams to grow together and tackle challenges head-on. Ready to
+        embrace new stacks and technologies, I aim to elevate not just the
+        projects I work on but also the people I work with.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

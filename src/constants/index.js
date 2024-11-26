@@ -114,12 +114,11 @@ const experiences = [
     iconBg: "#FAFAFA",
     date: "From November 2022",
     points: [
-      "Fintech Project Leadership: Directed the development of key fintech applications, innovating with a custom npm package to streamline API integration and improve overall system performance. The initiative significantly boosted application efficiency and user engagement.",
+      "Design System Overhaul & Codebase Simplification: Redesigned the project’s design system and folder structure, eliminating unnecessary code and third-party dependencies. Transitioned the codebase to a self-explanatory format, dramatically reducing bug-fixing times and improving the development process.",
       "Agile Development: Championed Agile and Scrum methodologies, ensuring seamless team coordination and on-time delivery of weekly sprint tasks. This strategic approach markedly increased team productivity and project delivery rates.",
-      "AI Integration & Prompt Engineering: Integrated AI into the application, leveraging prompt engineering to enhance user experience and make the system more intuitive and user-friendly for customers.",
-      "TypeScript & Cypress Integration: Enhanced codebase quality and reliability by integrating TypeScript and implementing Cypress for end-to-end testing, resulting in a 40% decrease in production bugs.",
-      "UI/UX Redesign: Oversaw the comprehensive redesign of the user interface for the platform’s second version, incorporating modern UI libraries and custom components to elevate the user experience, leading to a 25% increase in user satisfaction scores.",
-      "Project Structure Innovation: Reengineered the project framework to a Monorepo structure, enhancing code reuse and team collaboration, and facilitating a 20% improvement in development cycle times.",
+      "AI Integration & Prompt Engineering: Integrated advanced AI functionalities into the application using prompt engineering, enhancing user experience and enabling more intelligent workflows for users.",
+      "Efficiency & Scalability Improvements: Removed redundancies across the codebase, improving maintainability, feature development speed, and team collaboration. These changes empowered developers to resolve bugs faster and deploy features seamlessly.",
+      "Landing Page Development with Webflow: Spearheaded the design and implementation of the project’s landing page, transitioning to a new project ecosystem with Webflow to enhance digital presence and brand identity.",
     ],
   },
   {
@@ -152,9 +151,8 @@ const experiences = [
     iconBg: "#FAFAFA",
     date: "July 2008 - September 2018",
     points: [
-      "Web Development: Spearheaded the creation of multiple web pages and platforms using HTML, CSS, and JavaScript, as well as WordPress, catering to various businesses and retail shops. This initiative significantly improved client online presence and customer engagement.",
-      "Solution Optimization: Engineered web solutions and scripts to streamline operations, demonstrating a keen aptitude for enhancing process efficiency through innovative tech applications.",
-      "Innovative Product Development: Designed and implemented an intelligent Wi-Fi advertising system for restaurants, automatically engaging customers’ devices with tailored content and menus. This solution bridged technology with customer service, resulting in a 30% increase in client business engagement and sales.",
+      "Web Development: Created custom websites for small businesses using WordPress, HTML, and CSS.",
+      "Solution Optimization: Developed a foundational understanding of user-centric design and responsive web development.",
     ],
   },
 ];
