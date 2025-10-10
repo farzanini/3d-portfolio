@@ -74,15 +74,23 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      dpr={[1, 2]}
+      dpr={[1, 1.5]} // Reduce max pixel ratio for better performance
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{ 
+        preserveDrawingBuffer: true,
+        powerPreference: "high-performance",
+        antialias: true
+      }}
+      performance={{ min: 0.5 }} // Dynamic performance adjustment
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enablePan={false}
+          enableDamping={true}
+          dampingFactor={0.05}
         />
         <Computers isMobile={isMobile} />
       </Suspense>

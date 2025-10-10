@@ -4,6 +4,26 @@
 @tailwind components;
 @tailwind utilities;
 
+/* RTL Support for Farsi */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+/* RTL Flexbox adjustments */
+[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+/* RTL Margin/Padding adjustments - handled by Tailwind automatically */
+
 * {
   margin: 0;
   padding: 0;

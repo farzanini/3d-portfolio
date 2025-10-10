@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "tutorials": "Tutorials",
+    "about": "About",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "name": "Farzan",
+    "title": "Senior Frontend Developer | Full-Stack Engineer",
+    "description": "Welcome to my personal website. I'm a passionate software developer specializing in building exceptional digital experiences. With expertise in React, Three.js, Django, and modern web technologies, I create interactive, performant, and user-friendly applications.",
+    "ctaPortfolio": "View Portfolio",
+    "ctaBlog": "Read Blog",
+    "ctaTutorials": "Explore Tutorials",
+    "portfolioTitle": "Portfolio",
+    "portfolioDesc": "Explore my work, projects, experience, and technical skills",
+    "blogTitle": "Blog",
+    "blogDesc": "Read my thoughts on web development, technology, and coding",
+    "tutorialsTitle": "Tutorials",
+    "tutorialsDesc": "Learn from step-by-step guides on React, Three.js, and more",
+    "exploreMore": "Explore More"
+  },
+  "portfolio": {
+    "heroTitle": "Hi, I'm Farzan",
+    "heroSubtitle": "I develop 3D visuals, user interfaces and web applications",
+    "aboutTitle": "Overview",
+    "aboutSubtitle": "Introduction",
+    "techTitle": "Technologies",
+    "techSubtitle": "What I use",
+    "workTitle": "My Work",
+    "workSubtitle": "Projects",
+    "experienceTitle": "Work Experience",
+    "experienceSubtitle": "What I have done so far",
+    "contactTitle": "Get in touch",
+    "contactSubtitle": "Contact",
+    "contactName": "Your Name",
+    "contactEmail": "Your Email",
+    "contactMessage": "Your Message",
+    "contactSend": "Send",
+    "contactSending": "Sending..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "My thoughts and ideas",
+    "description": "Welcome to my blog! Here I share my thoughts on web development, programming, technology, and my journey as a software developer. I write about the challenges I face, solutions I discover, and interesting concepts I learn along the way.",
+    "backToBlog": "Back to Blog",
+    "viewOnGithub": "View on GitHub"
+  },
+  "tutorials": {
+    "title": "Tutorials",
+    "subtitle": "Learn with me",
+    "description": "Explore step-by-step tutorials covering web development, React, Three.js, and more. From beginner-friendly guides to advanced techniques, I share practical knowledge to help you level up your coding skills.",
+    "backToTutorials": "Back to Tutorials",
+    "difficulty": {
+      "beginner": "BEGINNER",
+      "intermediate": "INTERMEDIATE",
+      "advanced": "ADVANCED"
+    },
+    "viewSourceCode": "View Source Code"
+  },
+  "footer": {
+    "builtWith": "Built with React, Three.js & Tailwind CSS",
+    "getInTouch": "Get in Touch"
+  },
+  "services": {
+    "webDev": "Web Developer",
+    "reactDev": "React Developer",
+    "backendDev": "Backend Developer"
+  }
+}
+

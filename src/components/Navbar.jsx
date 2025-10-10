@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { logo, menu, close, resume } from "../assets";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,24 +54,41 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden sm:flex flex-row gap-6 items-center">
           <li
             key="Resume"
             className={`text-white font-poppins font-medium cursor-pointer text-[16px]`}
           >
-            <a href={resume}>Resume</a>
+            <a href={resume} target="_blank" rel="noopener noreferrer">{t('nav.resume')}</a>
           </li>
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-secondary"
+                (link.isRoute && location.pathname === link.id) || 
+                (!link.isRoute && active === link.title)
+                  ? "text-white"
+                  : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                if (link.isRoute) {
+                  navigate(link.id);
+                  setActive(link.title);
+                } else {
+                  setActive(link.title);
+                }
+              }}
             >
-              <a href={`#${link.id}`}>{link.title}</a>
+              {link.isRoute ? (
+                <span>{t(`nav.${link.titleKey}`)}</span>
+              ) : (
+                <a href={`#${link.id}`}>{t(`nav.${link.titleKey}`)}</a>
+              )}
             </li>
           ))}
+          <li>
+            <LanguageSwitcher />
+          </li>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -83,24 +105,39 @@ const Navbar = () => {
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
+              <li className="mb-2">
+                <LanguageSwitcher />
+              </li>
               <li
                 key="Resume"
                 className={`text-white font-poppins font-medium cursor-pointer text-[16px]`}
               >
-                <a href={resume}>Resume</a>
+                <a href={resume} target="_blank" rel="noopener noreferrer">{t('nav.resume')}</a>
               </li>
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-white" : "text-secondary"
+                    (link.isRoute && location.pathname === link.id) || 
+                    (!link.isRoute && active === link.title)
+                      ? "text-white"
+                      : "text-secondary"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
-                    setToggle((prevState) => !prevState);
-                    setActive(link.title);
+                    setToggle(false);
+                    if (link.isRoute) {
+                      navigate(link.id);
+                      setActive(link.title);
+                    } else {
+                      setActive(link.title);
+                    }
                   }}
                 >
-                  <a href={`#${link.id}`}>{link.title}</a>
+                  {link.isRoute ? (
+                    <span>{t(`nav.${link.titleKey}`)}</span>
+                  ) : (
+                    <a href={`#${link.id}`}>{t(`nav.${link.titleKey}`)}</a>
+                  )}
                 </li>
               ))}
             </ul>

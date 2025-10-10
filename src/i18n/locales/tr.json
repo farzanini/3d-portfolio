@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "portfolio": "Portföy",
+    "blog": "Blog",
+    "tutorials": "Eğitimler",
+    "about": "Hakkında",
+    "contact": "İletişim",
+    "resume": "Özgeçmiş"
+  },
+  "home": {
+    "greeting": "Merhaba, ben",
+    "name": "Farzan",
+    "title": "Kıdemli Frontend Geliştirici | Full-Stack Mühendis",
+    "description": "Kişisel web siteme hoş geldiniz. Olağanüstü dijital deneyimler oluşturma konusunda uzmanlaşmış tutkulu bir yazılım geliştiriciyim. React, Three.js, Django ve modern web teknolojilerinde uzmanlıkla, etkileşimli, performanslı ve kullanıcı dostu uygulamalar oluşturuyorum.",
+    "ctaPortfolio": "Portföyü Görüntüle",
+    "ctaBlog": "Blogu Oku",
+    "ctaTutorials": "Eğitimleri Keşfet",
+    "portfolioTitle": "Portföy",
+    "portfolioDesc": "İşlerimi, projelerimi, deneyimimi ve teknik becerilerimi keşfedin",
+    "blogTitle": "Blog",
+    "blogDesc": "Web geliştirme, teknoloji ve kodlama hakkındaki düşüncelerimi okuyun",
+    "tutorialsTitle": "Eğitimler",
+    "tutorialsDesc": "React, Three.js ve daha fazlası hakkında adım adım kılavuzlardan öğrenin",
+    "exploreMore": "Daha Fazla Keşfet"
+  },
+  "portfolio": {
+    "heroTitle": "Merhaba, ben Farzan",
+    "heroSubtitle": "3D görseller, kullanıcı arayüzleri ve web uygulamaları geliştiriyorum",
+    "aboutTitle": "Genel Bakış",
+    "aboutSubtitle": "Tanıtım",
+    "techTitle": "Teknolojiler",
+    "techSubtitle": "Kullandıklarım",
+    "workTitle": "Çalışmalarım",
+    "workSubtitle": "Projeler",
+    "experienceTitle": "İş Deneyimi",
+    "experienceSubtitle": "Şimdiye kadar yaptıklarım",
+    "contactTitle": "İletişime geçin",
+    "contactSubtitle": "İletişim",
+    "contactName": "Adınız",
+    "contactEmail": "E-postanız",
+    "contactMessage": "Mesajınız",
+    "contactSend": "Gönder",
+    "contactSending": "Gönderiliyor..."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Düşüncelerim ve fikirlerim",
+    "description": "Bloguma hoş geldiniz! Burada web geliştirme, programlama, teknoloji ve bir yazılım geliştiricisi olarak yolculuğum hakkındaki düşüncelerimi paylaşıyorum. Karşılaştığım zorluklar, keşfettiğim çözümler ve yol boyunca öğrendiğim ilginç kavramlar hakkında yazıyorum.",
+    "backToBlog": "Bloga Dön",
+    "viewOnGithub": "GitHub'da Görüntüle"
+  },
+  "tutorials": {
+    "title": "Eğitimler",
+    "subtitle": "Benimle öğrenin",
+    "description": "Web geliştirme, React, Three.js ve daha fazlasını kapsayan adım adım eğitimleri keşfedin. Yeni başlayanlar için uygun kılavuzlardan ileri tekniklere kadar, kodlama becerilerinizi geliştirmenize yardımcı olmak için pratik bilgiler paylaşıyorum.",
+    "backToTutorials": "Eğitimlere Dön",
+    "difficulty": {
+      "beginner": "BAŞLANGIÇ",
+      "intermediate": "ORTA",
+      "advanced": "İLERİ"
+    },
+    "viewSourceCode": "Kaynak Kodunu Görüntüle"
+  },
+  "footer": {
+    "builtWith": "React, Three.js ve Tailwind CSS ile oluşturuldu",
+    "getInTouch": "İletişime Geçin"
+  },
+  "services": {
+    "webDev": "Web Geliştirici",
+    "reactDev": "React Geliştirici",
+    "backendDev": "Backend Geliştirici"
+  }
+}
+
