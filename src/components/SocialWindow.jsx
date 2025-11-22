@@ -1,25 +1,26 @@
 import { useState } from "react";
 import Window from "./Window";
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from "./Icons";
 
 const socialLinks = [
   {
     id: "github",
     name: "GitHub",
-    icon: "🔗",
+    Icon: GitHubIcon,
     url: "https://github.com", // Replace with actual GitHub URL
     iframeUrl: null, // Can be set to embed GitHub profile
   },
   {
     id: "linkedin",
     name: "LinkedIn",
-    icon: "💼",
+    Icon: LinkedInIcon,
     url: "https://linkedin.com", // Replace with actual LinkedIn URL
     iframeUrl: null, // Can be set to embed LinkedIn profile
   },
   {
     id: "twitter",
     name: "Twitter/X",
-    icon: "🐦",
+    Icon: TwitterIcon,
     url: "https://twitter.com", // Replace with actual Twitter URL
     iframeUrl: null, // Can be set to embed Twitter timeline
   },
@@ -61,9 +62,9 @@ const SocialWindow = ({ isOpen, onClose }) => {
               <button
                 key={platform.id}
                 onClick={() => handlePlatformClick(platform)}
-                className="flex flex-col items-center p-6 bg-gray-700/30 border border-gray-600 rounded-lg hover:bg-gray-700/50 transition-colors group"
+                className="flex flex-col items-center p-6 bg-gray-700/30 border border-gray-600 rounded-lg hover:bg-gray-700/50 hover:border-accent/50 transition-all group hover:scale-105"
               >
-                <span className="text-4xl mb-3">{platform.icon}</span>
+                <platform.Icon className="mb-3" />
                 <span className="text-white font-medium">{platform.name}</span>
                 <span className="text-gray-400 text-xs mt-1 group-hover:text-gray-300">
                   {platform.iframeUrl ? "View embedded" : "Open link"}

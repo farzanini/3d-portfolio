@@ -5,6 +5,7 @@ import PortfolioWindow from "./PortfolioWindow";
 import BlogsWindow from "./BlogsWindow";
 import ResumeWindow from "./ResumeWindow";
 import SocialWindow from "./SocialWindow";
+import { PortfolioIcon, BlogsIcon, ResumeIcon, SocialIcon } from "./Icons";
 
 const Desktop = () => {
   const [openWindows, setOpenWindows] = useState({
@@ -18,25 +19,25 @@ const Desktop = () => {
     {
       id: "portfolio",
       name: "Portfolio",
-      icon: "📁",
+      Icon: PortfolioIcon,
       component: PortfolioWindow,
     },
     {
       id: "blogs",
       name: "Blogs",
-      icon: "📝",
+      Icon: BlogsIcon,
       component: BlogsWindow,
     },
     {
       id: "resume",
       name: "Resume",
-      icon: "📄",
+      Icon: ResumeIcon,
       component: ResumeWindow,
     },
     {
       id: "social",
       name: "Social",
-      icon: "🔗",
+      Icon: SocialIcon,
       component: SocialWindow,
     },
   ];
@@ -122,8 +123,8 @@ const Desktop = () => {
               className="flex items-center gap-4 cursor-pointer group"
               onClick={() => openWindow(icon.id)}
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 border border-gray-700 rounded-lg group-hover:bg-gray-700/50 group-hover:border-accent/50 transition-all group-hover:scale-110">
-                <span className="text-3xl">{icon.icon}</span>
+              <div className="w-16 h-16 flex items-center justify-center bg-gray-800/50 border border-gray-700 rounded-lg group-hover:bg-gray-700/50 group-hover:border-accent/50 transition-all group-hover:scale-110 group-hover:rotate-3">
+                <icon.Icon className="w-10 h-10" />
               </div>
               <span className="text-white text-sm font-medium group-hover:text-accent transition-colors">
                 {icon.name}
