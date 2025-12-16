@@ -30,7 +30,7 @@ const ServiceCard = ({ index, title, icon }) => (
   </Tilt>
 );
 
-const About = () => {
+export const AboutContent = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -42,13 +42,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Frontend Engineer with a sharp eye for efficiency and a passion for
-        clean, maintainable code. I thrive on simplifying complexity—whether
-        it's redesigning systems for clarity or leading teams toward streamlined
-        solutions. Known for my charismatic leadership and teaching abilities, I
-        inspire teams to grow together and tackle challenges head-on. Ready to
-        embrace new stacks and technologies, I aim to elevate not just the
-        projects I work on but also the people I work with.
+        Full-Stack Engineer with 7+ years of experience building scalable, type-safe applications across frontend and backend using Next.js, React 19, Node.js, TypeScript, SQL Server, PostgreSQL, MongoDB, Prisma, and Docker. Skilled in modernizing legacy systems (e.g., ASP.NET, Telerik), designing modular UI components, AI-driven workflows, multilingual platforms, and responsive design. Proven track record accelerating development velocity, optimizing performance, and delivering user-centric solutions in fintech and SaaS environments through Agile and Scrum methodologies.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
@@ -59,5 +53,7 @@ const About = () => {
     </>
   );
 };
+
+const About = AboutContent;
 
 export default SectionWrapper(About, "about");

@@ -19,6 +19,7 @@ import {
   three,
   emoter,
   threejs,
+  mongodb,
 } from "../assets";
 
 export const navLinks = [
@@ -38,7 +39,7 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Developer",
     icon: web,
   },
   {
@@ -104,55 +105,69 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
 ];
 
 const experiences = [
   {
-    title: "Senior Frontend Developer ",
+    title: "Full-Stack Developer",
+    company_name: "NovinTejarat - Blockchain-based Tokenization App for Financial Services",
+    icon: react,
+    iconBg: "#FAFAFA",
+    date: "Feb 2025 - Present",
+    points: [
+      "Architected and deployed high-performance RESTful APIs using Node.js and Express to handle transactions and user authentication.",
+      "Designed secure backend modules for loan, credit, and asset operations, improving data consistency and reducing backend errors by 35%.",
+      "Integrated PostgreSQL with optimized indexing and relational modeling to support 10K+ users.",
+      "Architected type-safe data layers with strict TypeScript, reducing runtime errors and increasing team velocity by 40%.",
+      "Implemented server-side filters, search, and pagination with type-safe queries, improving performance of data-heavy pages by 40%.",
+      "Integrated advanced filtering and search features, enabling 3x faster product discovery via optimized state management with Redux.",
+    ],
+  },
+  {
+    title: "Full-Stack Developer",
+    company_name: "Istg - Office-Automation Division",
+    icon: react,
+    iconBg: "#FAFAFA",
+    date: "Jan 2025 - Present",
+    points: [
+      "Overhauled ~1,000 lines of outdated code in ASP.NET Web Forms, reducing technical debt by ~20% and simplifying maintenance.",
+      "Integrated a Node.js microservice with the legacy ASP.NET Web Forms environment to manage new data processing tasks.",
+      "Managed and optimized MS SQL Server queries and stored procedures, improving report generation time by 25%.",
+      "Refactored Telerik RadTreeView/Grid components and server-side bindings into reusable backend-driven templates.",
+      "Automated visual regression testing with Playwright, catching layout shifts early and shortening QA cycles.",
+      "Improved Lighthouse accessibility score from 68 to 85 by standardizing headings, contrast ratios, and keyboard navigation.",
+      "Collaborated with product, QA, and backend teams to align UI with branding, ensuring smooth transitions for thousands of users.",
+    ],
+  },
+  {
+    title: "Full-Stack Engineer",
     company_name: "Extend",
     icon: react,
     iconBg: "#FAFAFA",
-    date: "From November 2022",
+    date: "Nov 2022 - Jan 2025",
     points: [
-      "Design System Overhaul & Codebase Simplification: Redesigned the project’s design system and folder structure, eliminating unnecessary code and third-party dependencies. Transitioned the codebase to a self-explanatory format, dramatically reducing bug-fixing times and improving the development process.",
-      "Agile Development: Championed Agile and Scrum methodologies, ensuring seamless team coordination and on-time delivery of weekly sprint tasks. This strategic approach markedly increased team productivity and project delivery rates.",
-      "AI Integration & Prompt Engineering: Integrated advanced AI functionalities into the application using prompt engineering, enhancing user experience and enabling more intelligent workflows for users.",
-      "Efficiency & Scalability Improvements: Removed redundancies across the codebase, improving maintainability, feature development speed, and team collaboration. These changes empowered developers to resolve bugs faster and deploy features seamlessly.",
-      "Landing Page Development with Webflow: Spearheaded the design and implementation of the project’s landing page, transitioning to a new project ecosystem with Webflow to enhance digital presence and brand identity.",
+      "Led the migration of a monolithic backend service to serverless functions (AWS Lambda/Firebase Functions) for improved cost-efficiency and scalability.",
+      "Designed and optimized PostgreSQL schemas for new features, reducing query overhead and improving load time by ~20%.",
+      "Introduced AI-driven features via prompt engineering, boosting user engagement by ~15% and automating tasks.",
+      "Reduced bug-fixing time by 40% via redesigning the folder structure, refactoring shared backend utilities, and enforcing type-safety across layers.",
+      "Implemented CI/CD integrations (GitHub Actions + Docker) for backend services.",
     ],
   },
   {
-    title: "Frontend Developer ",
-    company_name: "Inspection",
+    title: "Full-Stack Developer",
+    company_name: "Inspection Mate",
     icon: react,
     iconBg: "#FAFAFA",
-    date: "February 2020 - November 2022",
+    date: "Nov 2018 - Nov 2022",
     points: [
-      "React Application Development: Spearheaded the design and implementation of a scalable frontend architecture using React, driving improvements in application efficiency and user engagement. This initiative resulted in a 20% increase in application performance and user interaction.",
-      "Modern Deployment Practices: Leveraged Docker to containerize the frontend solution, ensuring streamlined deployment processes and enhanced scalability. This approach reduced deployment times by 30% and facilitated consistent environments across development and production.",
-      "Complex UI Challenges: Crafted and deployed a sophisticated user interface utilizing DevExtreme, adeptly presenting complex datasets through intuitive graphs and diagrams. Enhanced data visualization techniques led to a 25% improvement in user comprehension and decision-making efficiency",
-    ],
-  },
-  {
-    title: "Frontend Developer",
-    company_name: "Tymr",
-    icon: react,
-    iconBg: "#FAFAFA",
-    date: "January 2019 - February 2020",
-    points: [
-      "Startup Project Leadership: Pioneered the frontend development of Tymr’s time management system, showcasing my entrepreneurial spirit and ability to drive projects from concept to launch. This effort culminated in the successful deployment of a highly intuitive and user-friendly application.",
-      "Frontend Development Collaboration: Worked seamlessly with backend developers, employing React and Material-UI to craft dynamic user interfaces. This collaboration enhanced application functionality and user experience, leading to a 40% increase in user retention and a significant reduction in user-reported issues.",
-    ],
-  },
-  {
-    title: "Frontend developer",
-    company_name: "Dinaweb",
-    icon: react,
-    iconBg: "#FAFAFA",
-    date: "July 2008 - September 2018",
-    points: [
-      "Web Development: Created custom websites for small businesses using WordPress, HTML, and CSS.",
-      "Solution Optimization: Developed a foundational understanding of user-centric design and responsive web development.",
+      "Engineered defect-reporting tools with React + Node.js microservices, deployed at 10+ industrial sites.",
+      "Built backend endpoints for file uploads, incident reports, and real-time data sync using Express.js + PostgreSQL.",
+      "Containerized full application stack with Docker, reducing deployment time by 30%.",
+      "Engineered defect reporting tools for mining and heavy industry, deployed at 10+ sites and reducing manual reporting time by ~25%.",
     ],
   },
 ];
@@ -250,6 +265,117 @@ const projects = [
     image: emoter,
     demo_link: "https://emoter-git-main-farzanhosseini.vercel.app/",
     source_code_link: "https://github.com/FarzanHosseini/emoter",
+  },
+];
+
+// Desktop icons configuration
+export const desktopIcons = [
+  {
+    id: "portfolio",
+    name: "Portfolio",
+    icon: "💼",
+    action: "window",
+    target: "portfolio",
+  },
+  {
+    id: "resume",
+    name: "Resume",
+    icon: "📄",
+    action: "pdf",
+    target: null,
+  },
+  {
+    id: "gaming",
+    name: "Gaming Hub",
+    icon: "🎮",
+    action: "window",
+    target: "gaming",
+  },
+  {
+    id: "socials",
+    name: "Social Links",
+    icon: "🌐",
+    action: "window",
+    target: "socials",
+  },
+  {
+    id: "blogs",
+    name: "Blog",
+    icon: "✍️",
+    action: "window",
+    target: "blogs",
+  },
+];
+
+// Gaming links placeholder data
+export const gamingLinks = [
+  {
+    platform: "Steam",
+    username: "your_steam_username",
+    link: "https://steamcommunity.com/id/your_steam_username",
+    icon: "🎮",
+  },
+  {
+    platform: "Epic Games",
+    username: "your_epic_username",
+    link: "https://www.epicgames.com/account/personal",
+    icon: "🎯",
+  },
+  {
+    platform: "Discord",
+    username: "your_discord_tag",
+    link: "https://discord.com/users/your_id",
+    icon: "💬",
+  },
+  {
+    platform: "Twitch",
+    username: "your_twitch_username",
+    link: "https://www.twitch.tv/your_twitch_username",
+    icon: "📺",
+  },
+];
+
+// Social links placeholder data
+export const socialLinks = [
+  {
+    platform: "LinkedIn",
+    username: "Farzan Hosseini",
+    link: "https://www.linkedin.com/in/farzn/",
+    icon: "💼",
+  },
+  {
+    platform: "Website",
+    username: "farzn.com",
+    link: "https://farzn.com",
+    icon: "🌐",
+  },
+];
+
+// Blog posts placeholder data
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Getting Started with React and Three.js",
+    excerpt: "Learn how to create stunning 3D web experiences using React and Three.js...",
+    date: "2024-01-15",
+    link: "#",
+    tags: ["React", "Three.js", "Web Development"],
+  },
+  {
+    id: 2,
+    title: "Building Scalable Frontend Architectures",
+    excerpt: "Exploring best practices for creating maintainable and scalable frontend applications...",
+    date: "2024-01-10",
+    link: "#",
+    tags: ["React", "Architecture", "Best Practices"],
+  },
+  {
+    id: 3,
+    title: "Django REST Framework Tips and Tricks",
+    excerpt: "Discover advanced techniques for building robust APIs with Django REST Framework...",
+    date: "2024-01-05",
+    link: "#",
+    tags: ["Django", "Python", "API"],
   },
 ];
 

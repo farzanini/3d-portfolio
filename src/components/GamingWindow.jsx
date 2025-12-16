@@ -1,11 +1,11 @@
 import Window from "./Window";
-import { BlogsContent } from "./Blogs";
+import { GamingContent } from "./Gaming";
 
-const BlogsWindow = ({ isMinimized, isMaximized, onMinimize, onMaximize, onClose, onFocus, zIndex }) => {
+const GamingWindow = ({ isMinimized, isMaximized, onMinimize, onMaximize, onClose, onFocus, zIndex }) => {
   return (
     <Window
-      id="blogs"
-      title="Blog Posts"
+      id="gaming"
+      title="Gaming Hub"
       isMinimized={isMinimized}
       isMaximized={isMaximized}
       onMinimize={onMinimize}
@@ -13,14 +13,14 @@ const BlogsWindow = ({ isMinimized, isMaximized, onMinimize, onMaximize, onClose
       onClose={onClose}
       onFocus={onFocus}
       zIndex={zIndex}
-      initialPosition={{ x: 200, y: 120 }}
+      initialPosition={{ x: 150, y: 100 }}
     >
       <div className="p-6 h-full overflow-auto">
-        <BlogsContent />
+        <GamingContent />
       </div>
     </Window>
   );
 };
 
-export default BlogsWindow;
+export default GamingWindow;
 

@@ -7,7 +7,7 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
-const Contact = () => {
+export const ContactContent = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -39,7 +39,7 @@ const Contact = () => {
           from_name: form.name,
           to_name: "Farzan Hosseini",
           from_email: form.email,
-          to_email: "farzan.hosseiny@gmail.com",
+          to_email: "ini.farzan@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -133,4 +133,6 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+const ContactWrapper = ContactContent;
+
+export default SectionWrapper(ContactWrapper, "contact");

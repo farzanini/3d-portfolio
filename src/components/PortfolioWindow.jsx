@@ -1,98 +1,69 @@
-import { motion } from "framer-motion";
 import Window from "./Window";
-import { projects } from "../constants";
-import { github, demo } from "../assets";
+import { WorksContent } from "./Works";
+import { AboutContent } from "./About";
+import { ExperienceContent } from "./Experience";
+import { ContactContent } from "./Contact";
+import { useState } from "react";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  demo_link,
-  source_code_link,
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 }}
-      className="bg-gray-700/30 border border-gray-600 rounded-lg p-4 hover:bg-gray-700/50 transition-colors"
-    >
-      <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
-        <img
-          src={image}
-          alt={name}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 flex justify-end items-start gap-2 p-3 opacity-0 hover:opacity-100 transition-opacity bg-black/50">
-          <a
-            href={demo_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
-          >
-            <img
-              src={demo}
-              alt="demo"
-              className="w-4 h-4"
-            />
-          </a>
-          <a
-            href={source_code_link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-gray-700 transition-colors"
-          >
-            <img
-              src={github}
-              alt="github"
-              className="w-4 h-4"
-            />
-          </a>
-        </div>
-      </div>
+const PortfolioWindow = ({ isMinimized, isMaximized, onMinimize, onMaximize, onClose, onFocus, zIndex }) => {
+  const [activeTab, setActiveTab] = useState("works");
 
-      <h3 className="text-white font-semibold text-lg mb-2">{name}</h3>
-      <p className="text-gray-400 text-sm mb-3 line-clamp-3">{description}</p>
+  const tabs = [
+    { id: "works", label: "Projects" },
+    { id: "about", label: "About" },
+    { id: "experience", label: "Experience" },
+    { id: "contact", label: "Contact" },
+  ];
 
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={`${name}-${tag.name}`}
-            className={`text-xs px-2 py-1 rounded ${tag.color}`}
-          >
-            #{tag.name}
-          </span>
-        ))}
-      </div>
-    </motion.div>
-  );
-};
+  const renderContent = () => {
+    switch (activeTab) {
+      case "works":
+        return <WorksContent />;
+      case "about":
+        return <AboutContent />;
+      case "experience":
+        return <ExperienceContent />;
+      case "contact":
+        return <ContactContent />;
+      default:
+        return <WorksContent />;
+    }
+  };
 
-const PortfolioWindow = ({ isOpen, onClose }) => {
   return (
     <Window
       id="portfolio"
       title="Portfolio"
-      isOpen={isOpen}
+      isMinimized={isMinimized}
+      isMaximized={isMaximized}
+      onMinimize={onMinimize}
+      onMaximize={onMaximize}
       onClose={onClose}
-      initialPosition={{ x: 150, y: 150 }}
-      initialSize={{ width: 900, height: 700 }}
+      onFocus={onFocus}
+      zIndex={zIndex}
+      initialPosition={{ x: 100, y: 80 }}
     >
-      <div className="p-6">
-        <div className="mb-6">
-          <h2 className="text-white text-2xl font-semibold mb-2">My Projects</h2>
-          <p className="text-gray-400 text-sm">
-            These are my recent projects, which showcase my skills and experience
-            through real-world examples of my work.
-          </p>
+      <div className="h-full flex flex-col overflow-hidden">
+        {/* Tabs */}
+        <div className="flex border-b border-[#915eff] border-opacity-20 bg-black-200">
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveTab(tab.id)}
+              className={`px-6 py-3 text-sm font-medium transition-colors ${
+                activeTab === tab.id
+                  ? "text-white border-b-2 border-[#915eff] bg-[#915eff] bg-opacity-10"
+                  : "text-secondary hover:text-white hover:bg-[#915eff] hover:bg-opacity-5"
+              }`}
+            >
+              {tab.label}
+            </button>
+          ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects.map((project, index) => (
-            <ProjectCard key={`project-${index}`} index={index} {...project} />
-          ))}
+        {/* Content */}
+        <div className="flex-1 overflow-auto p-6">
+          {renderContent()}
         </div>
       </div>
     </Window>
